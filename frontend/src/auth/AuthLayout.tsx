@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
-import { Activity, ShieldCheck, Sparkles, Timer } from 'lucide-react'
+import { ClipboardList, Clock3, UserCheck } from 'lucide-react'
 import { Logo } from '../components/ui'
 
 export function AuthLayout({ children }: { children: ReactNode }) {
@@ -9,54 +9,41 @@ export function AuthLayout({ children }: { children: ReactNode }) {
       <section className="auth-brand">
         <div className="auth-brand-top">
           <Logo />
-          <span className="auth-pill">CS F213 · OOP project</span>
         </div>
 
         <div className="auth-brand-copy">
-          <p className="eyebrow">Intelligent IT service management</p>
-          <h1>
-            Resolve incidents.
-            <br />
-            <em>Not spreadsheets.</em>
-          </h1>
+          <h1>IT service desk</h1>
           <p>
-            One workspace for reporting, triage, SLA guardrails, technician assignment and a complete
-            audit trail — built around the way an IT support team actually works.
+            Report IT problems, follow their progress and confirm when they are fixed. Support staff use the
+            same workspace to triage, assign and resolve incidents against agreed service levels.
           </p>
         </div>
 
         <ul className="auth-benefits">
           <li>
-            <span><Sparkles size={17} /></span>
+            <span aria-hidden="true"><ClipboardList size={16} /></span>
             <div>
-              <strong>Smart triage</strong>
-              <p>Rule-based priority, category suggestions and duplicate detection.</p>
+              <strong>Reporting and triage</strong>
+              <p>Each report is categorised and prioritised from its impact, urgency and the affected service.</p>
             </div>
           </li>
           <li>
-            <span><Timer size={17} /></span>
+            <span aria-hidden="true"><UserCheck size={16} /></span>
             <div>
-              <strong>SLA guardrails</strong>
-              <p>Response and resolution targets with warnings, breaches and escalation.</p>
+              <strong>Assignment</strong>
+              <p>Incidents go to a suitable technician based on skills, workload and experience.</p>
             </div>
           </li>
           <li>
-            <span><ShieldCheck size={17} /></span>
+            <span aria-hidden="true"><Clock3 size={16} /></span>
             <div>
-              <strong>Role-aware access</strong>
-              <p>Employees, technicians and administrators each get the right workspace.</p>
+              <strong>Service levels</strong>
+              <p>Response and resolution targets are tracked, with warnings before they are missed.</p>
             </div>
           </li>
         </ul>
 
-        <div className="auth-pulse">
-          <span className="pulse-dot" aria-hidden="true" />
-          <div>
-            <strong>Service desk online</strong>
-            <span>13 demo incidents · 7 accounts · live PostgreSQL</span>
-          </div>
-          <Activity size={18} />
-        </div>
+        <p className="auth-course">CS F213 / MAC F212 Object-Oriented Programming project · 2026–27</p>
       </section>
 
       <section className="auth-form-side">

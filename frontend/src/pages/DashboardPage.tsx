@@ -143,11 +143,11 @@ export function DashboardPage() {
               <AreaChart data={data.trend} margin={{ top: 10, right: 12, left: -18, bottom: 0 }}>
                 <defs>
                   <linearGradient id="createdFill" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor={colors.created} stopOpacity={0.28} />
+                    <stop offset="0%" stopColor={colors.created} stopOpacity={0.1} />
                     <stop offset="100%" stopColor={colors.created} stopOpacity={0} />
                   </linearGradient>
                   <linearGradient id="resolvedFill" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor={colors.resolved} stopOpacity={0.22} />
+                    <stop offset="0%" stopColor={colors.resolved} stopOpacity={0.08} />
                     <stop offset="100%" stopColor={colors.resolved} stopOpacity={0} />
                   </linearGradient>
                 </defs>

@@ -65,7 +65,7 @@ export function useChartColors(): ChartColors {
   return useMemo(
     () => ({
       created: token('--accent'),
-      // Gold, not green: it must differ from the teal "created" series in hue and lightness.
+      // Gold, not green: it must differ from the blue "created" series in hue and lightness.
       resolved: token('--star'),
       grid: token('--line'),
       axis: token('--muted'),

@@ -42,10 +42,8 @@
 }
 
 .eyebrow {
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
   color: var(--muted);
 }
 
@@ -103,12 +101,10 @@
 .button-primary {
   background: var(--accent);
   color: var(--on-accent);
-  box-shadow: 0 8px 18px -12px var(--accent);
 }
 
 .button-primary:hover:not(:disabled) {
   background: var(--accent-strong);
-  transform: translateY(-1px);
 }
 
 .button-secondary {
@@ -263,9 +259,7 @@
   flex: 0 0 252px;
   height: 100svh;
   padding: 22px 14px 16px;
-  background:
-    radial-gradient(circle at 20% 0%, color-mix(in srgb, var(--accent) 35%, transparent), transparent 42%),
-    var(--sidebar);
+  background: var(--sidebar);
   color: var(--sidebar-ink);
 }
 
@@ -334,8 +328,8 @@
 }
 
 .nav-link-active {
-  background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 38%, transparent), color-mix(in srgb, var(--accent) 14%, transparent));
-  border-color: color-mix(in srgb, var(--accent) 22%, transparent);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: transparent;
   color: #fff;
   font-weight: 600;
 }
@@ -406,15 +400,13 @@
 
 .brand-lockup strong {
   font-size: 17px;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.01em;
 }
 
 .brand-lockup small {
   margin-top: 2px;
   font-size: 9.5px;
   color: var(--sidebar-muted);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .brand-glyph {
@@ -425,7 +417,6 @@
   border-radius: 10px;
   background: var(--accent);
   color: var(--on-accent);
-  box-shadow: 0 8px 18px -8px color-mix(in srgb, var(--accent) 90%, transparent);
 }
 
 .workspace {
@@ -445,8 +436,7 @@
   min-height: 66px;
   padding: 0 28px;
   border-bottom: 1px solid var(--line);
-  background: color-mix(in srgb, var(--bg) 90%, transparent);
-  backdrop-filter: blur(12px);
+  background: var(--bg);
 }
 
 .topbar-left,
@@ -537,7 +527,7 @@
   background: var(--accent-soft);
   color: var(--accent-strong);
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   border: 1px solid color-mix(in srgb, var(--accent) 28%, transparent);
 }
 
@@ -570,9 +560,9 @@
 
 .page-header h1 {
   margin-top: 5px;
-  font-size: clamp(25px, 2.6vw, 31px);
-  font-weight: 700;
-  letter-spacing: -0.035em;
+  font-size: clamp(22px, 2.2vw, 27px);
+  font-weight: 600;
+  letter-spacing: -0.01em;
   line-height: 1.15;
 }
 
@@ -609,7 +599,7 @@
 .section-title h2 {
   font-size: 16px;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 
 .section-title p {
@@ -636,7 +626,7 @@
   gap: 13px;
   padding: 17px;
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: var(--radius);
   background: var(--surface);
   box-shadow: var(--shadow-sm);
 }
@@ -650,13 +640,7 @@
   border-radius: 10px;
 }
 
-.stat-indigo .stat-icon { background: var(--accent-soft); color: var(--accent); }
-.stat-blue .stat-icon { background: var(--info-soft); color: var(--info); }
-.stat-red .stat-icon { background: var(--danger-soft); color: var(--danger); }
-.stat-amber .stat-icon { background: var(--warning-soft); color: var(--warning); }
-.stat-green .stat-icon { background: var(--success-soft); color: var(--success); }
-.stat-violet .stat-icon { background: var(--violet-soft); color: var(--violet); }
-.stat-slate .stat-icon { background: var(--surface-soft); color: var(--ink-soft); }
+.stat-card .stat-icon { background: var(--surface-soft); color: var(--muted); border: 1px solid var(--line); }
 
 .stat-label {
   font-size: 11px;
@@ -669,7 +653,7 @@
   margin-top: 3px;
   font-size: 25px;
   font-weight: 700;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.01em;
   line-height: 1.1;
 }
 
@@ -817,8 +801,6 @@
   color: var(--warning);
   font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
 }
 
 .person-inline {
@@ -886,8 +868,6 @@
   font-size: 10px;
   font-weight: 600;
   color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
 }
 
 .sla-clear {
@@ -975,7 +955,7 @@
 
 .mini-metrics strong {
   font-size: 16px;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.01em;
 }
 
 .workload-grid {
@@ -1125,7 +1105,7 @@
 .metric-stack strong {
   font-size: 16px;
   color: var(--ink);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 
 /* ---------- Filters ---------- */
@@ -1185,8 +1165,6 @@
   margin-right: 2px;
   font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
   color: var(--muted);
 }
 
@@ -1466,7 +1444,6 @@
   justify-content: center;
   padding: 20px;
   background: var(--overlay);
-  backdrop-filter: blur(3px);
 }
 
 .modal {
@@ -1501,7 +1478,7 @@
 .modal-header h2 {
   font-size: 18px;
   font-weight: 700;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.01em;
 }
 
 .modal-header p {
@@ -1567,23 +1544,8 @@
   flex-direction: column;
   overflow: hidden;
   padding: 40px 48px;
-  background:
-    radial-gradient(circle at 8% 8%, color-mix(in srgb, var(--accent) 50%, transparent), transparent 38%),
-    radial-gradient(circle at 95% 92%, color-mix(in srgb, var(--info) 32%, transparent), transparent 42%),
-    var(--sidebar);
+  background: var(--sidebar);
   color: #fff;
-}
-
-.auth-brand::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-  background-size: 52px 52px;
-  mask-image: radial-gradient(ellipse at 30% 20%, #000 10%, transparent 68%);
-  pointer-events: none;
 }
 
 .auth-brand > * {
@@ -1604,8 +1566,6 @@
   border-radius: 999px;
   color: var(--sidebar-ink);
   font-size: 9.5px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
 }
 
 .auth-brand-copy {
@@ -1619,24 +1579,17 @@
 
 .auth-brand-copy h1 {
   margin-top: 12px;
-  font-size: clamp(36px, 4.2vw, 56px);
-  font-weight: 700;
-  letter-spacing: -0.05em;
-  line-height: 1.02;
-}
-
-.auth-brand-copy h1 em {
-  font-family: var(--font-display);
-  font-weight: 400;
-  letter-spacing: -0.025em;
-  color: #8fd3cb;
+  font-size: clamp(28px, 2.8vw, 36px);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
 }
 
 .auth-brand-copy > p:last-child {
   max-width: 49ch;
   margin-top: 18px;
   color: var(--sidebar-muted);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.65;
 }
 
@@ -1655,63 +1608,28 @@
 }
 
 .auth-benefits li > span {
-  display: grid;
-  place-items: center;
   flex: 0 0 auto;
-  width: 32px;
-  height: 32px;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 9px;
-  background: rgba(255, 255, 255, 0.055);
-  color: #8fd3cb;
+  padding-top: 2px;
+  color: var(--sidebar-muted);
 }
 
 .auth-benefits strong {
   display: block;
-  font-size: 12.5px;
+  font-size: 13.5px;
 }
 
 .auth-benefits p {
   margin-top: 2px;
   color: var(--sidebar-muted);
-  font-size: 11.5px;
+  font-size: 12.5px;
   line-height: 1.5;
 }
 
-.auth-pulse {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: auto;
-  padding: 12px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 11px;
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.auth-pulse > div {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.auth-pulse strong {
+.auth-course {
+  margin: auto 0 0;
+  padding-top: 32px;
+  color: var(--sidebar-muted);
   font-size: 11.5px;
-}
-
-.auth-pulse span {
-  font-size: 10px;
-  color: var(--sidebar-muted);
-}
-
-.auth-pulse .pulse-dot {
-  flex: 0 0 auto;
-  background: #4ade80;
-  box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.13);
-}
-
-.auth-pulse > svg {
-  color: var(--sidebar-muted);
 }
 
 .auth-form-side {
@@ -1732,9 +1650,9 @@
   width: min(438px, 100%);
   padding: 30px;
   border: 1px solid var(--line);
-  border-radius: 18px;
+  border-radius: 12px;
   background: var(--surface);
-  box-shadow: 0 30px 70px -50px rgba(20, 24, 36, 0.45);
+  box-shadow: none;
 }
 
 .auth-heading .eyebrow {
@@ -1745,7 +1663,7 @@
   margin-top: 7px;
   font-size: 25px;
   font-weight: 700;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.01em;
 }
 
 .auth-heading p {
@@ -1774,8 +1692,6 @@
   margin-bottom: 9px;
   font-size: 9.5px;
   font-weight: 700;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
   color: var(--muted);
 }
 
@@ -1892,7 +1808,7 @@
 .form-section-heading h2 {
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 
 .form-section-heading p {
@@ -1985,8 +1901,6 @@
 .service-hint span {
   font-size: 9.5px;
   font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
   color: var(--muted);
 }
 
@@ -2008,9 +1922,7 @@
 }
 
 .triage-panel {
-  background:
-    radial-gradient(circle at 100% 0%, color-mix(in srgb, var(--accent) 8%, transparent), transparent 34%),
-    var(--surface);
+  background: var(--surface);
 }
 
 .triage-heading {
@@ -2126,8 +2038,6 @@
   margin-bottom: 8px;
   font-size: 10.5px;
   font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
   color: var(--muted);
 }
 
@@ -2265,7 +2175,7 @@
 .incident-header h1 {
   font-size: clamp(21px, 2.4vw, 27px);
   font-weight: 700;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.01em;
   line-height: 1.2;
 }
 
@@ -2359,8 +2269,6 @@
 .metadata-grid span {
   font-size: 9px;
   font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
   color: var(--muted);
 }
 
@@ -2639,9 +2547,7 @@
 }
 
 .sla-panel {
-  background:
-    radial-gradient(circle at 100% 0%, color-mix(in srgb, var(--accent) 6%, transparent), transparent 38%),
-    var(--surface);
+  background: var(--surface);
 }
 
 .sla-row {
@@ -2673,7 +2579,7 @@
 
 .sla-row strong {
   font-size: 14px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 
 .sla-row small {
@@ -2706,8 +2612,6 @@
 .person-block span {
   font-size: 9px;
   font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
   color: var(--muted);
 }
 
@@ -3359,7 +3263,7 @@
 
 .not-found h1 {
   font-size: 28px;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.01em;
 }
 
 .not-found p {
@@ -3896,7 +3800,7 @@
   flex-direction: column;
   gap: 14px;
   padding: 20px 22px;
-  border: 2px solid color-mix(in srgb, var(--warning) 55%, transparent);
+  border: 1px solid color-mix(in srgb, var(--warning) 35%, transparent);
   border-radius: var(--radius);
   background: var(--warning-soft);
 }
